@@ -1,4 +1,4 @@
-import {customerList} from "../db/db.js";
+import {customerAddList} from "../db/db.js";
 import {Customer} from "../model/Customer.js";
 
 export class CustomerController {
@@ -10,7 +10,7 @@ export class CustomerController {
         $("#customerBtnSection>:nth-child(3)").click(this.handelDeleteCustomer.bind(this));
         $("#customerBtnSection>:nth-child(4)").click(this.btnNewCustomer.bind(this));
         $("#searchCustomer").on("keyup", this.searchCustomer.bind(this));
-        this.customerList2 = customerList;
+        this.customerList2 = customerAddList;
         this.loadAllCustomer();
         this.initialize();
     }

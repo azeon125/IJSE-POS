@@ -1,4 +1,4 @@
-import {customerList, itemList, orderDetailList, orderList} from "../db/db.js";
+import {customerAddList, itemAdd, orderDetailList, orderAddList} from "../db/db.js";
 import {OrderDetail} from "../model/OrderDetail.js";
 import {Order} from "../model/Order.js";
 
@@ -6,9 +6,9 @@ export class OrderController {
 
 
     constructor() {
-        this.customerList = customerList;
-        this.itemList = itemList;
-        this.orderList = orderList;
+        this.customerList = customerAddList;
+        this.itemList = itemAdd;
+        this.orderList = orderAddList;
         this.orderDetailList = orderDetailList;
         this.orderDetailListTM=[];
 
@@ -20,7 +20,7 @@ export class OrderController {
     }
 
     initialize() {
-        let id = orderList.length + "";
+        let id = orderAddList.length + "";
         $("#lblOrderID").text("D" + id.padStart(3, "0"));
 
         $("#dropCustomer").html("");

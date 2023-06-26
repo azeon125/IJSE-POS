@@ -1,4 +1,4 @@
-import {itemList} from "../db/db.js";
+import {itemAdd} from "../db/db.js";
 import {Item} from "../model/Item.js";
 
 export class ItemController {
@@ -9,12 +9,12 @@ export class ItemController {
         $("#itemBtnSection>:nth-child(3)").click(this.handelDeleteItem.bind(this));
         $("#itemBtnSection>:nth-child(4)").click(this.handelNewItemAddTOClear.bind(this));
         $("#searchItem").on("keyup", this.handelSearchItem.bind(this));
-        this.itemList = itemList;
+        this.itemList = itemAdd;
         this.loadItemTable();
         this.initialize();
     }
     initialize() {
-        let id = itemList.length+1+"";
+        let id = itemAdd.length+1+"";
         $("#itemCode").val("P"+id.padStart(3,"0"));
 
     }
