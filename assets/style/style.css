@@ -89,6 +89,10 @@ tbody > tr:hover {
 
 }
 
+#section-photo{
+    overflow-y: hidden;
+}
+
 
 /* width */
 ::-webkit-scrollbar {
